@@ -30,10 +30,12 @@ fn main() {
     for element in document.select(&dt_selector) {
         let date_element = element.select(&date_selector).next().expect("Could not select book name.");
         let date_raw = date_element.text().collect::<String>();
+        println!("");
         println!("{:?}", date_raw);
         let time_element = element.select(&time_selector).next().expect("Could not select book name.");
         let time_raw = time_element.text().collect::<String>();
         println!("{:?}", time_raw);
+        println!("");
     }
 
     let  mut i = 0 ;
